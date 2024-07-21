@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.demo.mapper.BaoliaoMapper">
+    <insert id="insertBaoliao" parameterType="com.example.demo.bean.baoliao">
+        insert into wodebaoliao(companyName,job,city,wage,lowWage,highWage,type,qualification,profession,detail,isAudit) 
+        values (#{companyName},#{job},#{city},#{wage},#{lowWage},#{highWage},#{type},#{qualification},#{profession},#{detail},0)
+        
+        <selectKey keyProperty="id" order="AFTER" resultType="int">
+            SELECT LAST_INSERT_ID()
+        </selectKey>
+    </insert>
+</mapper>

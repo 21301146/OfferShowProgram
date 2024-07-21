@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.demo.mapper.ShoucangMapper"> 
+    <insert id="insertXinZiShouCang" parameterType="com.example.demo.bean.xinzishoucang">
+        insert into xinzishoucang(companyName,universityName,job,major,city,wage,type,qualification,profession,detail,reliability) 
+        values (#{companyName},#{universityName},#{job},#{major},#{city},#{wage},#{type},#{qualification},#{profession},#{detail},#{reliability})
+        
+        <selectKey keyProperty="id" order="AFTER" resultType="int">
+        SELECT LAST_INSERT_ID()
+    </selectKey>
+    </insert>
+    
+    <insert id="insertHuaTiShouCang" parameterType="com.example.demo.bean.huatishoucang">
+        insert into huatishoucang(companyName,companyName1,companyName2,job,detail) 
+        values (#{companyName},#{companyName1},#{companyName2},#{job},#{detail})
+        
+        <selectKey keyProperty="id" order="AFTER" resultType="int">
+        SELECT LAST_INSERT_ID()
+    </selectKey>
+    </insert>
+    
+    <delete id="deleteXinZiShouCang">
+    	delete from xinzishoucang where qualification=#{qualification} and detail=#{detail}
+    </delete>
+    
+    <delete id="deleteHuaTiShouCang">
+    	delete from huatishoucang where detail=#{detail}
+    </delete>
+</mapper>

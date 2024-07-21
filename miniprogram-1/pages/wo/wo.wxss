@@ -1,0 +1,87 @@
+/* pages/wo/wo.wxss */
+.user{
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 150px;
+  background-color:#1e90ff;
+  border-bottom: 10px;
+}
+
+.touxiang{
+  position: relative;
+  width: 40%;
+  height: 80px;
+  left: 20px;
+}
+
+.nicheng{
+  position: relative;
+  width: 80%;
+  height: 40px;
+  left: 30px;
+  top:10px;
+  font-size: large; 
+  color: white;
+}
+
+.qianming{
+  position: relative;
+  width: 80%;
+  height: 40px;
+  left: -103px;
+  top: 50px;
+}
+
+.shezhi{
+  position: relative;
+  width: 25%;
+  height: 45px;
+  top:15px;
+  right: 20px;
+}
+
+.wode,
+.changyong,
+.qita{
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  width: 90%;
+  background-color: white;
+  border: 2px solid #efefef;
+  border-radius: 10px;
+  left: 5%;
+  align-items: center;
+  justify-content: space-around;
+  z-index: 999;
+}
+
+.wode{
+  height: 100px;
+  top:-30px;
+}
+
+.changyong{
+  height: 80px;
+  top:5px;
+  margin-bottom: 30px;
+}
+
+.qita{
+  height: 80px;
+  top: 5px;
+}
+
+.item{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+image{
+  width: 40px;
+  height: 40px;
+  vertical-align: middle;
+}

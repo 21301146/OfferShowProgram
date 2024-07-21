@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.demo.mapper.DongtaiMapper">
+    <select id="getXiaoZhao" resultType="com.example.demo.bean.recuit">
+    	select * from recuitInfo where type="校招"
+    </select>
+    
+    <select id="getShiXi" resultType="com.example.demo.bean.recuit">
+    	select * from recuitInfo where type="实习"
+    </select>
+    
+    <select id="getReMen" resultType="com.example.demo.bean.recuit">
+    	select * from recuitInfo
+    </select>
+</mapper>

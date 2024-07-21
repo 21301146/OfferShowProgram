@@ -1,0 +1,10 @@
+<!--pages/huatishoucang/huatishoucang.wxml-->
+<!-- <text>pages/huatishoucang/huatishoucang.wxml</text> -->
+<view class='msg'>
+  <text wx:if="{{item.companyName}}">公司名：{{item.companyName}}</text>
+  <text wx:if="{{item.companyName1 && item.companyName2}}">{{item.companyName1}} VS {{item.companyName2}}</text>
+  <text wx:if="{{item.job}}">职位：{{item.job}}</text>
+  <text>{{item.detail}}</text>
+</view>
+<button wx:if="{{!isShoucang}}" bindtap="addHuati" style="background-color: #1e90ff;">添加到话题收藏</button>
+<button wx:else bindtap="cancelHuati" style="background-color: #efefef;">取消收藏</button>

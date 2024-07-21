@@ -1,0 +1,78 @@
+<!--pages/zhuanlan/zhuanlan.wxml-->
+<!-- <text>pages/zhuanlan/zhuanlan.wxml</text> -->
+<!-- 分类 -->
+<view class="topnav">
+  <block wx:for="{{topNav}}" wx:key="id">
+    <view class="{{ curTopIndex === item.id ? 'selected' : ''}}" data-id="{{item.id}}" bindtap="topNavTap">{{item.title}}</view>
+  </block>
+</view>
+<view class="nav">
+  <block wx:for="{{topNav[curTopNav].navList}}" wx:key="id">
+    <view class="{{ curIndex === item.id ? 'selected' : 'normal'}}" data-id="{{item.id}}" data-message="{{curTopNav}}" bindtap="navTap">{{item.title}}</view>
+  </block>
+</view>
+<view class="info">
+  <view wx:if="{{curTopNav == 0}}">
+    <view wx:if="{{curNav == 0 }}"> 
+      <view class="info_item" wx:for="{{topNav[curTopNav].navList[curNav].list}}" wx:key="id">
+        <view class='msg' bindtap="changeXinzi" data-message="{{item}}">
+          <text>公司名：{{item.companyName}}</text>
+          <text>职位：{{item.job}}</text>
+          <text>城市：{{item.city}}</text>
+          <text>薪资：{{item.wage}}</text>
+          <text>学历：{{item.qualification}}</text>
+          <text>行业：{{item.profession}}</text>
+        </view>
+      </view>
+    </view>
+    <view wx:elif="{{curNav == 1 }}">
+      <view class="info_item" wx:for="{{topNav[curTopNav].navList[curNav].list}}" wx:key="id">
+        <view class='msg' bindtap="changeHuati" data-message="{{item}}">
+          <text>公司名：{{item.companyName}}</text>
+          <text>{{item.detail}}</text>
+        </view>
+      </view>
+    </view>
+    <view wx:elif="{{curNav == 2 }}">
+      <view class="info_item" wx:for="{{topNav[curTopNav].navList[curNav].list}}" wx:key="id">
+        <view class='msg' bindtap="changeHuati" data-message="{{item}}">
+          <text>{{item.companyName1}} VS {{item.companyName2}}</text>
+          <text>{{item.detail}}</text>
+        </view>
+      </view>
+    </view>
+    <view wx:elif="{{curNav == 3 }}">
+      <view class="info_item" wx:for="{{topNav[curTopNav].navList[curNav].list}}" wx:key="id">
+        <view class='msg' bindtap="changeHuati" data-message="{{item}}">
+          <text>公司名：{{item.companyName}}</text>
+          <text>职位：{{item.job}}</text>
+          <text>{{item.detail}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view wx:elif="{{curTopNav == 1}}">
+    <view wx:if="{{curNav == 0 || curNav == 1 || curNav == 3}}">
+      <view class="info_item" wx:for="{{topNav[curTopNav].navList[curNav].list}}" wx:key="id">
+        <view class='msg' bindtap="changeXinzi" data-message="{{item}}">
+          <text>公司名：{{item.companyName}}</text>
+          <text>职位：{{item.job}}</text>
+          <text>城市：{{item.city}}</text>
+          <text>薪资：{{item.wage}}</text>
+          <text>学历：{{item.qualification}}</text>
+          <text>行业：{{item.profession}}</text>
+        </view>
+      </view>
+    </view>
+    <view wx:if="{{curNav == 2}}">
+      <view class="info_item" wx:for="{{topNav[curTopNav].navList[curNav].list}}" wx:key="id">
+        <view class='msg' bindtap="changeXinzi" data-message="{{item}}">
+          <text>大学：{{item.universityName}}</text>
+          <text>专业：{{item.major}}</text>
+          <text>城市：{{item.city}}</text>
+          <text>学历：{{item.qualification}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

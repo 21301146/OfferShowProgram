@@ -1,0 +1,53 @@
+<!--pages/wode/wode.wxml-->
+<!-- <text>pages/wode/wode.wxml</text> -->
+<view class="info">
+  <view wx:if="{{path=='baoliao'}}">
+    <view>
+      <checkbox-group bindchange="HandelItemChange">
+        <checkbox class="msg" value="{{item.id}}" wx:for="{{list}}" wx:key="id">
+          <text>公司名：{{item.companyName}}\n</text>
+          <text>职位：{{item.job}}\n</text>
+          <text>城市：{{item.city}}\n</text>
+          <text>薪资：{{item.wage}}\n</text>
+          <text>最低薪资：{{item.lowWage}}\n</text>
+          <text>最高薪资：{{item.highWage}}\n</text>
+          <text>类型：{{item.type}}\n</text>
+          <text>学历：{{item.qualification}}\n</text>
+          <text>行业：{{item.profession}}\n</text>
+          <text>详情：{{item.detail}}\n</text>
+          <text wx:if="{{item.isAudit}}">审核状态:已审核</text>
+          <text wx:else>审核状态:未审核</text>
+        </checkbox>
+      </checkbox-group>
+    </view>
+    <button wx:if="{{list.length!=0}}" data-message="{{path}}" bindtap="shanchu">删除</button>
+  </view>
+  <view wx:elif="{{path=='zhaoren'}}">
+    <view>
+      <checkbox-group bindchange="HandelItemChange">
+        <checkbox class="msg" value="{{item.id}}" wx:for="{{list}}" wx:key="id">
+          <text wx:if="{{item.companyName}}">公司名：{{item.companyName}}\n</text>
+          <text wx:if="{{item.job}}">职位：{{item.job}}\n</text>
+          <text wx:if="{{item.city}}">城市：{{item.city}}\n</text>
+          <text wx:if="{{item.wage}}">薪资：{{item.wage}}\n</text>
+          <text wx:if="{{item.type}}">类型：{{item.type}}\n</text>
+          <text wx:if="{{item.qualification}}">学历：{{item.qualification}}\n</text>
+          <text wx:if="{{item.profession}}">行业：{{item.profession}}\n</text>
+          <text>详情：{{item.detail}}</text>
+        </checkbox>
+      </checkbox-group>
+    </view>
+    <view class="btns">
+      <button wx:if="{{list.length!=0}}" data-message="{{path}}" bindtap="fabu">确认发布</button>
+      <button wx:if="{{list.length!=0}}" data-message="{{path}}" bindtap="shanchu">删除</button>
+    </view>
+  </view>
+  <view wx:elif="{{path=='xiaoxi'}}">
+    <view>
+      <checkbox-group bindchange="HandelItemChange">
+        <checkbox class="msg" value="{{item.id}}" wx:for="{{list}}" wx:key="id">{{item.detail}}</checkbox>
+      </checkbox-group>
+    </view>
+    <button wx:if="{{list.length!=0}}" data-message="{{path}}" bindtap="shanchu">删除</button>
+  </view>
+</view>

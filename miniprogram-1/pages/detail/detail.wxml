@@ -1,0 +1,35 @@
+<!--pages/detail/detail.wxml-->
+<!-- <text>pages/detail/detail.wxml</text> -->
+<view wx:if="{{path=='shequn'}}">
+  <text style="font-size: larger; width: 100%; margin-left: 40%;">请扫码进群</text>
+  <view class="info">
+    <image src="/images/detail/技术类.png"></image>
+    <text>技术类</text>
+  </view>
+  <view class="info">
+    <image src="/images/detail/非技术类.png"></image>
+    <text>非技术类</text>
+  </view>
+</view>
+<view wx:elif="{{path=='jianli'}}">
+  <text style="font-size: larger; width: 100%; margin-left: 40%;">请扫码关注</text>
+  <view class="info">
+    <image style="width: 350px; height: 600px; margin-bottom: 20px;" src="/images/detail/简历模板.png"></image>
+  </view>
+</view>
+<view wx:elif="{{path=='qingdan'}}">
+  <text style="font-size: larger; width: 100%; margin-left: 40%;">请扫码关注</text>
+  <view class="info">
+    <image style="width: 350px; height: 600px; margin-bottom: 20px;" src="/images/detail/薪资清单.png"></image>
+  </view>
+</view>
+<view wx:elif="{{path=='fankui'}}">
+  <view class="info">
+    <image style="width: 350px; height: 200px; margin-bottom: 20px;" src="/images/detail/反馈.png"></image>
+  </view>
+</view>
+<view wx:elif="{{path=='about'}}">
+  <view class="info">
+    <text style="font-size: larger;">关于我们</text>
+  </view>
+</view>

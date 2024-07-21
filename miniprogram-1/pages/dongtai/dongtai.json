@@ -1,0 +1,6 @@
+{
+  "component": true,
+  "usingComponents": {},
+  "navigationBarTitleText": "Offer Show 薪资动态",
+  "onReachBottomDistance": 200
+}

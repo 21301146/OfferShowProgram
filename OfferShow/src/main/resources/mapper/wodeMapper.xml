@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.demo.mapper.WodeMapper">
+	<select id="getUserInfo" resultType="com.example.demo.bean.user">
+		select * from user
+	</select>
+	
+	<update id="updateUserInfo" parameterType="com.example.demo.bean.user">
+		update user set nicheng=#{nicheng},qianming=#{qianming}
+	</update>
+
+	<select id="getXiaoXi" resultType="com.example.demo.bean.message">
+		select * from message
+	</select>
+	
+    <select id="getBaoLiao" resultType="com.example.demo.bean.baoliao">
+        select * from wodebaoliao
+    </select>
+    
+    <select id="getZhaoRen" resultType="com.example.demo.bean.zhaoren">
+    	select * from zhaoren
+    </select>
+    
+    <select id="getXinZiShouCang" resultType="com.example.demo.bean.xinzishoucang">
+    	select * from xinzishoucang
+    </select>
+    
+    <select id="getHuaTiShouCang" resultType="com.example.demo.bean.huatishoucang">
+    	select * from huatishoucang
+    </select>
+    
+    <insert id="insertZhaoRen" parameterType="com.example.demo.bean.zhaoren">
+        insert into zhaoren(companyName,job,city,wage,type,qualification,profession,detail) 
+        values (#{companyName},#{job},#{city},#{wage},#{type},#{qualification},#{profession},#{detail})
+        
+        <selectKey keyProperty="id" order="AFTER" resultType="int">
+        	SELECT LAST_INSERT_ID()
+    	</selectKey>
+    </insert>
+    
+    <delete id="deleteXiaoXi">
+    	delete from message where id in 
+    	<foreach  item="item" collection="array" index="index"  open="(" separator="," close=")">
+			#{item}
+		</foreach>
+    </delete>
+    
+    <delete id="deleteBaoLiao">
+    	delete from wodebaoliao where id in 
+    	<foreach  item="item" collection="array" index="index"  open="(" separator="," close=")">
+			#{item}
+		</foreach>
+    </delete>
+    
+    <delete id="deleteZhaoRen">
+    	delete from zhaoren where id in 
+    	<foreach  item="item" collection="array" index="index"  open="(" separator="," close=")">
+			#{item}
+		</foreach>
+    </delete>
+    
+    <delete id="deleteXinZi">
+    	delete from xinzishoucang where detail in 
+    	<foreach  item="item" collection="array" index="index"  open="(" separator="," close=")">
+			#{item}
+		</foreach>
+    </delete>
+    
+    <delete id="deleteHuati">
+    	delete from huatishoucang where detail in 
+    	<foreach  item="item" collection="array" index="index"  open="(" separator="," close=")">
+			#{item}
+		</foreach>
+    </delete>
+    
+    <insert id="fabuZhaoRen">
+    	insert into hr(companyName,job,city,wage,type,qualification,profession,detail)
+    	select companyName,job,city,wage,type,qualification,profession,detail from zhaoren where id in
+    	<foreach  item="item" collection="array" index="index"  open="(" separator="," close=")">
+			#{item}
+		</foreach>
+		
+		<selectKey keyProperty="id" order="AFTER" resultType="int">
+        	SELECT LAST_INSERT_ID()
+    	</selectKey>
+    </insert>
+</mapper>

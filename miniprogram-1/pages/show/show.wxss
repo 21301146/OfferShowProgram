@@ -1,0 +1,46 @@
+/* pages/show/show.wxss */
+.nav{
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction:row;
+  height:40px;
+}
+
+.nav view{
+  text-align: center;
+  font-size: 14px;
+  height: 30px;
+  line-height: 30px;
+  margin-top: 10px;
+}
+
+.selected{
+  width: 14%;
+  color:#1e90ff;
+}
+
+.normal{
+  width: 14%;
+}
+
+.info{
+  position: relative;
+}
+
+.msg{
+  display: flex;
+  flex-direction: column;
+  font-size: 12px;
+  border: 1px solid #efefef;
+  width: 95%;
+  margin: 2.5%;
+}
+
+button{
+  position: relative;
+  width: 80px;
+  font-size: 12px;
+  background-color:#1e90ff;
+  color: white;
+}

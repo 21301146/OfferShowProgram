@@ -1,0 +1,34 @@
+<!--pages/shezhi/shezhi.wxml-->
+<!-- <text>pages/shezhi/shezhi.wxml</text> -->
+<!-- 头像 -->
+<view class="touxiang">
+  <image src="{{user.touxiang}}" bindtap="showModal"></image>
+  <text style="color: lightgray;">为保护隐私，头像不可修改</text>
+</view>
+<!-- 昵称 -->
+<text style="color: lightgray; margin-left: 20px;">昵称</text>
+<input type="text" placeholder="{{user.nicheng}}" bindchange="inputNicheng"/>
+<!-- 签名 -->
+<text style="color: lightgray; margin-left: 20px;">签名</text>
+<input type="text" placeholder="{{user.qianming}}" bindchange="inputQianming"/>
+<!-- 确认修改 -->
+<button bindtap="queren">确认修改</button>
+<!--dialog隐藏区域  -->
+<view class="modals" hidden="{{hideModal}}">
+	<!-- 遮罩层-->
+  <view class="modals-cancel" bindtap="hideModal"></view>
+  <view class="bottom-dialog-body bottom-pos" animation="{{animationData}}">
+    <image src="{{user.touxiang}}" style="margin-top: 10px;"></image>
+    <text style="color: lightgray;">从下方选择头像</text>
+    <view class="nav">
+      <block wx:for="{{nav}}" wx:key="id">
+        <view class="{{ curTopIndex === item.id ? 'selected' : ''}}" data-id="{{item.id}}" bindtap="topNavTap">{{item.title}}</view>
+      </block>
+    </view>
+    <view class="msg">
+      <block wx:for="{{nav[curTopNav].images}}" wx:key="id">
+        <image referrerPolicy="no-referrer" data-id="{{item.id}}" data-message="{{curTopNav}}" bindtap="navTap" style="margin-top: 0px;">{{item.path}}</image>
+      </block>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,60 @@
+<!--pages/wo/wo.wxml-->
+<!-- <text>pages/wo/wo.wxml</text> -->
+<!-- 头像、昵称、签名 -->
+<view class="user" data-message="shezhi" bindtap="updateUser">
+  <image class="touxiang" referrerPolicy="no-referrer" src="{{user.touxiang}}"></image>
+  <view class="nicheng">{{user.nicheng}}</view>
+  <view class="qianming">{{user.qianming}}</view>
+  <image class="shezhi" src="/images/wo/设置.png"></image>
+</view>
+<!-- 我的消息 我的爆料 我的投稿 我的收藏 -->
+<view class="wode">
+  <view class="item" data-message="xiaoxi" bindtap="checkMessage">
+    <image src="/images/wo/我的消息.png"></image>
+    <text style="font-size: small;">我的消息</text>
+  </view>
+  <view class="item" data-message="baoliao" bindtap="checkMessage">
+    <image src="/images/wo/我的爆料.png"></image>
+    <text style="font-size: small;">我的爆料</text>
+  </view>
+  <view class="item" data-message="zhaoren" bindtap="checkMessage">
+    <image src="/images/wo/我的投稿.png"></image>
+    <text style="font-size: small;">我的投稿</text>
+  </view>
+  <view class="item" data-message="shoucang" bindtap="showMessage">
+    <image src="/images/wo/我的收藏.png"></image>
+    <text style="font-size: small;">我的收藏</text>
+  </view>
+</view>
+<!-- 常用功能 -->
+<text style="font-weight: bold; color:rgb(61, 100, 230); margin-left: 20px;">常用功能</text>
+<view class="changyong">
+  <view class="item" data-message="shequn" bindtap="checkDetail">
+    <image src="/images/wo/求职社群.png"></image>
+    <text style="font-size: small;">求职社群</text>
+  </view>
+  <view class="item" data-message="jianli" bindtap="checkDetail">
+    <image src="/images/wo/简历模板.png"></image>
+    <text style="font-size: small;">简历模板</text>
+  </view>
+  <view class="item" data-message="qingdan" bindtap="checkDetail">
+    <image src="/images/wo/薪资清单.png"></image>
+    <text style="font-size: small;">薪资清单</text>
+  </view>
+</view>
+<!-- 其他功能 -->
+<text style="font-weight: bold; color:rgb(61, 100, 230); margin-left: 20px;">其它功能</text>
+<view class="qita">
+  <view class="item" data-message="zhaoren" bindtap="zhaoRen">
+    <image src="/images/wo/我要招人.png"></image>
+    <text style="font-size: small;">我要招人</text>
+  </view>
+  <view class="item" data-message="fankui" bindtap="checkDetail">
+    <image src="/images/wo/产品反馈.png"></image>
+    <text style="font-size: small;">产品反馈</text>
+  </view>
+  <view class="item" data-message="about" bindtap="checkDetail">
+    <image src="/images/wo/关于我们.png"></image>
+    <text style="font-size: small;">关于我们</text>
+  </view>
+</view>

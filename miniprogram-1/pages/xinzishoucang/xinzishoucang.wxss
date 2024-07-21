@@ -1,0 +1,21 @@
+/* pages/xinzishoucang/xinzishoucang.wxss */
+.msg{
+  display: flex;
+  flex-direction: column;
+  font-size: 12px;
+  width: 90%;
+  margin-left: 5%;
+  border: 2px solid #efefef;
+  border-radius: 3px;
+}
+
+text{
+  font-size: large;
+  margin: 10px;
+}
+
+button{
+  width: 90%;
+  margin: 5%;
+  color: white;
+}

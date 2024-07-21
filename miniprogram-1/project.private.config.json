@@ -1,0 +1,71 @@
+{
+  "description": "项目私有配置文件。此文件中的内容将覆盖 project.config.json 中的相同字段。项目的改动优先同步到此文件中。详见文档：https://developers.weixin.qq.com/miniprogram/dev/devtools/projectconfig.html",
+  "projectname": "OfferShow",
+  "setting": {
+    "compileHotReLoad": true,
+    "skylineRenderEnable": true,
+    "urlCheck": false
+  },
+  "condition": {
+    "miniprogram": {
+      "list": [
+        {
+          "name": "pages/info/info",
+          "pathName": "pages/info/info",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "pages/shezhi/shezhi",
+          "pathName": "pages/shezhi/shezhi",
+          "query": "path=shezhi",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "pages/zhaoren/zhaoren",
+          "pathName": "pages/zhaoren/zhaoren",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "pages/zhuanlan/zhuanlan",
+          "pathName": "pages/zhuanlan/zhuanlan",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "pages/wo/wo",
+          "pathName": "pages/wo/wo",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "pages/dongtai/dongtai",
+          "pathName": "pages/dongtai/dongtai",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "pages/chaxun/chaxun",
+          "pathName": "pages/chaxun/chaxun",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "pages/baoliao/baoliao",
+          "pathName": "pages/baoliao/baoliao",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        }
+      ]
+    }
+  }
+}

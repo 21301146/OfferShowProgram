@@ -1,0 +1,38 @@
+<!--pages/dongtai/dongtai.wxml-->
+<!-- <text>pages/dongtai/dongtai.wxml</text> -->
+
+<!-- 分类 -->
+<view class="nav">
+  <block wx:for="{{nav}}" wx:key="id">
+    <view class="{{ curIndex === item.id ? 'selected' : 'normal'}}" data-id="{{item.id}}" bindtap="navTap">{{item.title}}</view>
+  </block>
+</view>
+<view class="info">
+  <view wx:if="{{curNav == 0 || curNav==1}}">
+    <view class="info_item" wx:for="{{nav[curNav].list}}" wx:key="id">
+      <view class='msg' bindtap="changeXinzi" data-message="{{item}}">
+        <text>公司名：{{item.companyName}}</text>
+        <text>职位：{{item.job}}</text>
+        <text>城市：{{item.city}}</text>
+        <text>薪资：{{item.wage}}</text>
+        <text>类型：{{item.type}}</text>
+        <text>学历：{{item.qualification}}</text>
+        <text>行业：{{item.profession}}</text>
+        <!-- <text>可信度：{{item.reliability}}</text> -->
+      </view>
+    </view>
+  </view>
+  <view wx:elif="{{curNav==2}}">
+    <view class="info_item" wx:for="{{nav[curNav].list}}" wx:key="id">
+      <view class='msg' bindtap="changeXinzi" data-message="{{item}}">
+        <text>公司名：{{item.companyName}}</text>
+        <text>职位：{{item.job}}</text>
+        <text>城市：{{item.city}}</text>
+        <text>薪资：{{item.wage}}</text>
+        <text>学历：{{item.qualification}}</text>
+        <text>行业：{{item.profession}}</text>
+        <!-- <text>可信度：{{item.reliability}}</text> -->
+      </view>
+    </view>
+  </view>
+</view>

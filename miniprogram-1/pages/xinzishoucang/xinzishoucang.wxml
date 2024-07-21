@@ -1,0 +1,16 @@
+<!--pages/xinzishoucang/xinzishoucang.wxml-->
+<!-- <text>pages/xinzishoucang/xinzishoucang.wxml</text> -->
+<view class='msg'>
+  <text wx:if="{{item.companyName}}">公司名：{{item.companyName}}</text>
+  <text wx:if="{{item.universityName}}">大学名：{{item.universityName}}</text>
+  <text wx:if="{{item.job}}">职位：{{item.job}}</text>
+  <text wx:if="{{item.major}}">专业：{{item.major}}</text>
+  <text>城市：{{item.city}}</text>
+  <text wx:if="{{item.wage}}">薪资：{{item.wage}}</text>
+  <text wx:if="{{item.type}}">类型：{{item.type}}</text>
+  <text>学历：{{item.qualification}}</text>
+  <text wx:if="{{item.profession}}">行业：{{item.profession}}</text>
+  <text wx:if="{{item.reliability}}">可信度：{{item.reliability}}</text>
+</view>
+<button wx:if="{{!isShoucang}}" bindtap="addXinzi" style="background-color: #1e90ff;">添加到薪资收藏</button>
+<button wx:else bindtap="cancelXinzi" style="background-color: #efefef;">取消收藏</button>

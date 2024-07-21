@@ -1,0 +1,28 @@
+/* pages/wode/wode.wxss */
+.info{
+  position: relative;
+}
+
+.msg{
+  display: flex;
+  flex-direction: column;
+  font-size: 12px;
+  border: 1px solid #efefef;
+  width: 95%;
+  margin: 2.5%;
+}
+
+.btns{
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  margin: 5%;
+}
+
+button{
+  position: relative;
+  width: 80px;
+  font-size: 12px;
+  background-color:#1e90ff;
+  color: white;
+}

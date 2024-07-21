@@ -1,0 +1,43 @@
+<!--pages/show/show.wxml-->
+<!-- <text>pages/show/show.wxml</text> -->
+<!-- 分类 -->
+<view class="nav">
+  <block wx:for="{{nav}}" wx:key="id">
+    <view class="{{ curIndex === item.id ? 'selected' : 'normal'}}" data-id="{{item.id}}" bindtap="navTap">{{item.title}}</view>
+  </block>
+</view>
+<view class="info">
+  <view wx:if="{{curNav == 0}}">
+    <view>
+      <checkbox-group bindchange="HandelItemChange">
+        <checkbox class="msg" value="{{item.detail}}" wx:for="{{nav[curNav].list}}" wx:key="id">
+          <text wx:if="{{item.companyName}}">公司名：{{item.companyName}}\n</text>
+          <text wx:if="{{item.universityName}}">大学名：{{item.universityName}}\n</text>
+          <text wx:if="{{item.job}}">职位：{{item.job}}\n</text>
+          <text wx:if="{{item.major}}">专业：{{item.major}}\n</text>
+          <text>城市：{{item.city}}\n</text>
+          <text wx:if="{{item.wage}}">薪资：{{item.wage}}\n</text>
+          <text wx:if="{{item.type}}">类型：{{item.type}}\n</text>
+          <text>学历：{{item.qualification}}\n</text>
+          <text wx:if="{{item.profession}}">行业：{{item.profession}}\n</text>
+          <text wx:if="{{item.detail}}">详情：{{item.detail}}\n</text>
+          <text wx:if="{{item.reliability}}">可信度：{{item.reliability}}\n</text>
+        </checkbox>
+      </checkbox-group>
+      <button wx:if="{{nav[curNav].list.length!=0}}" data-message="xinzi" bindtap="shanchu">取消收藏</button>
+    </view>
+  </view>
+  <view wx:elif="{{curNav==1}}">
+    <view>
+      <checkbox-group bindchange="HandelItemChange">
+        <checkbox class="msg" value="{{item.detail}}" wx:for="{{nav[curNav].list}}" wx:key="id">
+          <text wx:if="{{item.name}}">公司名：{{item.name}}\n</text>
+          <text wx:if="{{item.companyName1 && item.companyName2}}">{{item.companyName1}} VS {{item.companyName2}}\n</text>
+          <text wx:if="{{item.job}}">职位：{{item.job}}\n</text>
+          <text>详情：{{item.detail}}</text>
+        </checkbox>
+      </checkbox-group>
+    </view>
+    <button wx:if="{{nav[curNav].list.length!=0}}" data-message="huati" bindtap="shanchu">取消收藏</button>
+  </view>
+</view>

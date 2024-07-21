@@ -1,0 +1,26 @@
+<!--pages/info/info.wxml-->
+<!-- <text>pages/info/info.wxml</text> -->
+<view>
+  <!-- 搜索框 -->
+  <view class="sousuo">
+    <input placeholder="请输入你想搜索的公司" bindchange="inputChange" />
+    <button bindtap="queryRecuits">查询</button>
+  </view>
+  <!-- 展示框 -->
+  <view class="info">
+    <view  class="info_item" wx:for="{{recuitList}}" wx:key="index">
+      <view class="msg">
+        <text wx:if="{{item.companyName}}">公司名：{{item.companyName}}</text>
+        <text wx:if="{{item.universityName}}">大学名：{{item.universityName}}</text>
+        <text wx:if="{{item.job}}">职位：{{item.job}}</text>
+        <text wx:if="{{item.major}}">专业：{{item.major}}</text>
+        <text wx:if="{{item.city}}">城市：{{item.city}}</text>
+        <text wx:if="{{item.wage}}">薪资：{{item.wage}}</text>
+        <text wx:if="{{item.type}}">类型：{{item.type}}</text>
+        <text wx:if="{{item.qualification}}">学历：{{item.qualification}}</text>
+        <text wx:if="{{item.profession}}">行业：{{item.profession}}</text>
+        <text wx:if="{{item.reliability}}">可信度：{{item.reliability}}</text>
+      </view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,12 @@
+/* pages/detail/detail.wxss */
+.info{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+image{
+  position: relative;
+  margin-top: 20px;
+}

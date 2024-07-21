@@ -1,0 +1,68 @@
+{
+  "pages": [
+    "pages/chaxun/chaxun",
+    "pages/baoliao/baoliao",
+    "pages/dongtai/dongtai",
+    "pages/zhuanlan/zhuanlan",
+    "pages/wo/wo",
+    "pages/info/info",
+    "pages/wode/wode",
+    "pages/shezhi/shezhi",
+    "pages/zhaoren/zhaoren",
+    "pages/detail/detail",
+    "pages/xinzishoucang/xinzishoucang",
+    "pages/huatishoucang/huatishoucang",
+    "pages/show/show"
+  ],
+  "window": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "OfferShow",
+    "navigationBarBackgroundColor": "#fff",
+    "enablePullDownRefresh": true,
+    "backgroundColor": "#efefef"
+  },
+  "tabBar": {
+    "list": [{
+      "pagePath": "pages/baoliao/baoliao",
+      "text": "爆料",
+      "iconPath": "/images/TabBar/baoliao.png",
+      "selectedIconPath": "/images/TabBar/baoliao.png"
+    },
+    {
+      "pagePath": "pages/dongtai/dongtai",
+      "text": "薪资动态",
+      "iconPath": "/images/TabBar/dongtai.png",
+      "selectedIconPath": "/images/TabBar/dongtai.png"
+    },
+    {
+      "pagePath": "pages/chaxun/chaxun",
+      "text": "薪资查询",
+      "iconPath": "/images/TabBar/chaxun.png",
+      "selectedIconPath": "/images/TabBar/chaxun.png"
+    },
+    {
+      "pagePath": "pages/zhuanlan/zhuanlan",
+      "text": "Offer专栏",
+      "iconPath": "/images/TabBar/zhuanlan.png",
+      "selectedIconPath": "/images/TabBar/zhuanlan.png"
+    },
+    {
+      "pagePath": "pages/wo/wo",
+      "text": "我",
+      "iconPath": "/images/TabBar/wo.png",
+      "selectedIconPath": "/images/TabBar/wo.png"
+    }
+    ]
+  },
+  "rendererOptions": {
+    "skyline": {
+      "defaultDisplayBlock": true,
+      "disableABTest": true,
+      "sdkVersionBegin": "3.0.0",
+      "sdkVersionEnd": "15.255.255"
+    }
+  },
+  "componentFramework": "glass-easel",
+  "sitemapLocation": "sitemap.json",
+  "lazyCodeLoading": "requiredComponents"
+}

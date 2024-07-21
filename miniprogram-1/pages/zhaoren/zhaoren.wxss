@@ -1,0 +1,118 @@
+/* pages/zhaoren/zhaoren.wxss */
+.body{
+  width: 375px;
+  height: 533px;
+  justify-content: space-around;
+}
+
+.back-top{
+  position: fixed;
+  width: inherit;
+  height: 50%;
+  background-color: #1e90ff;
+  top:0;
+}
+
+.back_bottom{
+  position: fixed;
+  width: inherit;
+  height: 50%;
+  background-color: white;
+  bottom:0;
+}
+
+.title{
+  position: relative;
+  width: 375px;
+  height: 30px;
+  font-size: 24px;
+  z-index: 999;
+  text-align: center;
+  top:50px;
+}
+
+.zhaoren-content{
+  position: relative;
+  width: 350px;
+  height: 950px;
+  margin-top:80px;
+  margin-left: 10px;
+  border: 3px solid #efefef;
+  background-color: white;
+  border-radius: 3px;
+  z-index: 999;
+}
+
+image{
+  width: 30px;
+  height: 30px;
+}
+
+.description{
+  position: relative;
+  display: flex;
+  width: 300px;
+  margin:20px;
+}
+
+.description view{
+  position: relative;
+  line-height: 30px;
+}
+
+input{
+  position: relative;
+  width: 300px;
+  background: transparent;
+  margin-left: 20px;
+  border:3px solid rgb(196, 191, 191);
+  border-radius: 3px;
+}
+
+.wage{
+  position: relative;
+  width: 305px;
+  display: flex;
+  margin-left: 20px;
+}
+
+.wage input{
+  position: relative;
+  width: 145px;
+  background: transparent;
+  border:3px solid rgb(196, 191, 191);
+  border-radius: 3px;
+  margin-left:0%;
+}
+
+.type{
+  position: relative;
+  width: 305px;
+  height: 60px;
+  display: flex;
+  margin-left: 20px;
+}
+
+/* 按钮未选中 */
+.normal_button{
+  background: rgb(243, 240, 240);
+  width: 150px;
+  height: 40px;
+  margin-top: 10px;
+}
+/* 按钮选中 */
+.checked_button{
+  background: rgb(86, 148, 219);
+  color: white;
+  width: 150px;
+  height: 40px;
+  margin-top: 10px;
+}
+
+button{
+  position: relative;
+  margin-top: 40px;
+  width: 150px;
+  border: 3px solid rgb(86, 148, 219);
+  font-size: 14px;
+}

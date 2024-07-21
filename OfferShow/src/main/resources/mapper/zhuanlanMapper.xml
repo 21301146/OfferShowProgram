@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.demo.mapper.ZhuanlanMapper">
+    
+    <select id="getFaXian" resultType="com.example.demo.bean.recuit">
+    	SELECT * FROM recuitInfo
+    </select>
+    
+    <select id="getXinZiKuaiXun" resultType="com.example.demo.bean.xinzikuaixun">
+    	SELECT * FROM xinzikuaixun
+    </select>
+    
+    <select id="getOfferXuanZe" resultType="com.example.demo.bean.offerxuanze">
+    	SELECT * FROM offerxuanze
+    </select>
+    
+    <select id="getQiuZhi" resultType="com.example.demo.bean.qiuzhi">
+    	SELECT * FROM qiuzhi
+    </select>
+    
+    <select id="getHRZhuanChang" resultType="com.example.demo.bean.hr">
+    	SELECT * FROM HR
+    </select>
+    
+    <select id="getJinRong" resultType="com.example.demo.bean.jinrong">
+    	SELECT * FROM jinrong
+    </select>
+    
+    <select id="getYanJiuSheng" resultType="com.example.demo.bean.yanjiusheng">
+    	SELECT * FROM yanjiusheng
+    </select>
+    
+    <select id="getQiChe" resultType="com.example.demo.bean.qiche">
+    	SELECT * FROM qiche
+    </select>
+    
+</mapper>

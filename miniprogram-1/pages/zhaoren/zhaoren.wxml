@@ -1,0 +1,73 @@
+<!--pages/zhaoren/zhaoren.wxml-->
+<!-- <text>pages/zhaoren/zhaoren.wxml</text> -->
+<view class="body">
+  <!-- 背景的上半部分 -->
+  <view class="back-top"></view>
+  <!-- 背景的下半部分 -->
+  <view class="back-bottom"></view>
+  <!-- 悬浮在页面的标题 -->
+  <view class="title">我 要 招 人</view>
+  <!-- 悬浮在页面的填写框 -->
+  <view class="zhaoren-content">
+    <!-- 填写公司名 -->
+    <view class="description">
+      <image src="/images/BaoLiao/公司.png"></image>
+      <view>公司</view>
+    </view>
+    <input type="text" placeholder="公司名称" bindchange="inputCompany"/>
+    <!-- 填写岗位名 -->
+    <view class="description">
+      <image src="/images/BaoLiao/岗位.png"></image>
+      <view>岗位</view>
+    </view>
+    <input type="text" placeholder="岗位" bindchange="inputJob"/>
+    <!-- 填写城市名 -->
+    <view class="description">
+      <image src="/images/BaoLiao/城市.png"></image>
+      <view>城市</view>
+    </view>
+    <input type="text" placeholder="城市" bindchange="inputCity"/>
+    <!-- 填写薪资描述 -->
+    <view class="description">
+      <image src="/images/BaoLiao/薪资.png"></image>
+      <view>薪资</view>
+    </view>
+    <input type="text" placeholder="薪资描述" bindchange="inputWage"/>
+    <!-- 填写类型（校招或实习 -->
+    <view>
+      <view class="description">
+        <image src="/images/BaoLiao/岗位.png"></image>
+        <view>工作类型</view>
+      </view>
+      <view class="type">
+        <!-- <button bindtap="selectType" data-text="校招">校招</button>
+        <button bindtap="selectType" data-text="实习">实习</button> -->
+        <block wx:for="{{buttons}}" wx:key="buttons">
+          <button class='{{item.checked?"checked_button":"normal_button"}}' data-id='{{item.id}}' data-text="{{item.name}}" bindtap='selectType'>{{item.name}}</button>
+        </block>
+      </view>
+    </view>
+    <!-- 填写学历 -->
+    <view class="description">
+      <image src="/images/BaoLiao/学历.png"></image>
+      <view>学历</view>
+    </view>
+    <input type="text" placeholder="学历（本科、硕士、博士）" bindchange="inputQual"/>
+    <!-- 选择行业 -->
+    <view class="description">
+      <image src="/images/BaoLiao/行业.png"></image>
+      <view>行业</view>
+    </view>
+    <input type="text" placeholder="行业（前端开发、数据分析）" bindchange="inputPro"/>
+    <!-- 填写备注 -->
+    <view class="description">
+      <image src="/images/BaoLiao/备注.png"></image>
+      <view>备注</view>
+    </view>
+    <input type="text" placeholder="备注" bindchange="inputDetail"/>
+    <!-- 确认提交 -->
+    <view>
+      <button type="default" bindtap="isCommit">暂存到我的投稿</button>
+    </view>
+  </view>
+</view>
